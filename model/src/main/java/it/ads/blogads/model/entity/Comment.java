@@ -48,7 +48,7 @@ public class Comment implements java.io.Serializable {
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
 	@Fetch(FetchMode.SELECT)
-	@JoinColumn(name = "ARTICLE_ID", nullable = false)
+	@JoinColumn(name = "C_ARTICLE_ID", referencedColumnName = "ARTICLE_ID", nullable = false)
 	private Article article;
 	
 	/**

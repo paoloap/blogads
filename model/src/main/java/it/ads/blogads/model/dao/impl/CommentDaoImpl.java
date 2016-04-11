@@ -18,22 +18,18 @@ public class CommentDaoImpl implements ICommentDao{
 	@PersistenceContext
 	private EntityManager entitymanager;
 	
+	@Override
 	public void save(Comment comment){
 		entitymanager.persist(comment);
 	}
 	
+	@Override
 	public void update(Comment comment){
 		entitymanager.merge(comment);
 	}
 	
+	@Override
 	public void delete(Comment comment){
 		entitymanager.remove(comment);
 	}
-	
-	/*
-	public Comment findByCommentCode(String commentCode){
-		[...]
-	}
-	*/
-
 }

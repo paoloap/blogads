@@ -1,0 +1,4 @@
+DELETE FROM Article;
+DELETE FROM Comment;
+DELETE FROM Tag;
+DELETE FROM Article_Tag;
